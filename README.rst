@@ -15,20 +15,28 @@ API that has two endpoints, one to hold a resource, and another to release the r
 
 To Run:
 ----------
-``
+
+
     pip install -r requirements.txt
+    
     python3 manage.py migrate
+    
     python3 runserver
-``
+    
+
 the endpoints available are
+
 /api/resources/request/{PK}/
+
 and
+
 /api/resources/release/{PK}/
 
 - You need the corresponding PK for the resource name.
 
 Future Improvments
 ^^^^^^^^^^^^^^^^^^
+
 - use names instead of PK for finding the resource.
 - Add authentication that considers each microservice as a user.
 - Consider that microservices would need to lock more than one resource at the same time.
